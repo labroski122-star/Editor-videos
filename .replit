@@ -1,0 +1,8 @@
+# Comando da eseguire quando si preme "Run"
+# Ho cambiato main.py in app.py come hai detto tu
+run = ["python3", "app.py"]
+
+language = "python3"
+
+[nix]
+channel = "stable-23.11"
