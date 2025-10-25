@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea Video (Server-side)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Crea MP4 da Immagine + Audio</h1>
+    <p>Questo strumento usa un server Replit con FFmpeg per unire i file.</p>
+
+    <div class="container">
+        <form id="uploadForm">
+            <label for="imageUpload">1. Carica un'immagine (JPG, PNG):</label>
+            <input type="file" id="imageUpload" name="image" accept="image/jpeg, image/png" required>
+
+            <label for="audioUpload">2. Carica un file audio (MP3, WAV):</label>
+            <input type="file" id="audioUpload" name="audio" accept="audio/mpeg, audio/wav" required>
+
+            <button type="submit" id="convertButton">3. Converti in MP4</button>
+        </form>
+
+        <div id="status">
+            <p id="statusText">Pronto per iniziare.</p>
+            <div id="loading" class="hidden"></div>
+        </div>
+        
+        <a id="downloadLink" download class="hidden">Download Video Completato</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
